@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+p{
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 22px;
+}
+
+a{
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+h1{
+	font-size: 45px;
+}
+
+h2{
+	font-size: 40px;
+}
+
+h3{
+	font-size: 35px;
+}
+
+h4{
+	font-size: 30px;
+}
+
+h5{
+	font-size: 25px;
+}
+
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 99999999;
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+.menu nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu nav ul li{
+    margin-left: 15px;
+}
+
+.menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.hero{
+    height: 80vh;
+    background-image: url('./img/back-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    background-color: #333;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    gap:20px;
+}
+
+.btn{
+    text-align: center;
+    background-color: chartreuse;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.8;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    padding: 20px 30px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.btn:hover{
+	animation: float 2s ease-in-out infinite;
+}
+
+ @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+.about-us {
+
+	display: flex;
+	gap: 40px;
+	flex-direction: column;
+	text-align: start;
+    background-color: #333;
+    padding: 80px 0px;
+
+}
+ 
+.about-us h1 {
+
+	text-align: center;
+    color: azure;
+
+}
+
+.about-content {
+
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    
+
+}
+
+.about-content-left {
+
+	
+    width: 45%;
+    color: aliceblue;
+
+}
+
+ 
+.about-content-right {
+
+	display: flex;
+    justify-content: end;
+    width: 55%;
+    color: aliceblue;
+
+}
+ 
+.about-content-right img {
+
+	width: 100%;
+    height: auto;
+    display: block;
+
+}
+ 
+
+
+.features{
+	display: flex;
+	gap: 40px;
+	flex-direction: column;
+	padding: 80px 0px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.feature-row{
+	width: 75vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	
+}
+
+.feature-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 40px;
+	gap: 20px;
+}
+
+.feature-box img{
+	display: block;
+	width: 100%;
+}
+
+.feature-box.red{
+	background-color: red;
+}
+
+
+.feature-box.yellow{
+	background-color: yellow;
+}
+
+.feature-box.blue{
+	background-color: blue;
+}
+
+.feature-box.green{
+	background-color: green;
+}
+
+#parallax{
+    
+    background-image: url('./img/back-hero.jpg');
+    width: 100%;
+    height: 50vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.portfolio{
+	display: flex;
+	gap: 40px;
+	flex-direction: column;
+	padding: 80px 0px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.portfolio-row{
+	width: 75vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	
+}
+
+.portfolio-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+	text-align: center;
+	padding: 40px;
+	gap: 20px;
+    height: 700px;
+    overflow: hidden;
+    color: white;
+    transition: all 300ms ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.portfolio-box:hover {
+    background-image: url('./img/back-portfolio-box-20.jpg')!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.portfolio-box.primo{
+    background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.secondo{
+     background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.terzo{
+     background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.quarto{
+    background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.quinto{
+     background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.sesto{
+     background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.settimo{
+     background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.ottavo{
+    background-image: url('./img/designer.jpg');
+}
+
+.portfolio-box.nono{
+    background-image: url('./img/designer.jpg');
+}
+
+
+.portfolio-box h1{
+    transform: translateY(200px);
+    transition: all 400ms ease-in-out;
+    color: white;
+}
+
+.portfolio-box:hover h1{
+    transform: translateY(0px);
+}
+
+.portfolio-box p{
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all 400ms ease-in-out;
+    transition-delay: 100ms;
+}
+
+.portfolio-box:hover p{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.ri-arrow-down-line{
+    font-size: 30px;
+    color: chartreuse;
+}
+
+
