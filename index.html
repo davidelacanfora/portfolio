@@ -1,192 +1,304 @@
 <!DOCTYPE html>
-<html lang="it-IT">
+<html>
     <head>
+        <title>Davide La Canfora Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
         <meta charset="utf-8">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="./Style.css">
-        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-         
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="cursor">
+            <span class="text"></span>
+        </div>
         <header>
-            <div class="logo">
-                <img src=".\logo kodo white5.png">
+            <div class="contenitore-logo">
+            <img class="logo" src="logo-webmaster.svg" alt="">
             </div>
-            <div class="menu">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#ChiSiamo">Chi Siamo</a>
-                    </li>
-                    <li>
-                        <a href="#Servizi">Servizi</a>
-                    </li>
-                    <li>
-                        <a href="#Portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#Recensioni">Recensioni</a>
-                    </li>
-                    <li>
-                        <a href="#Contatti">Contatti</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="contenitore-menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#webDesign">WEB DESIGN</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#contatti">CONTATTI</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+            <div class="contenitore-lingua">
+                <img src="bandiera ing.png" alt="bandiera inghilterra">
+            </div>
+
         </header>
         <main>
             <section class="hero">
+                <div class="overlay-hero"></div>
                 <div class="hero-content">
-                    <h2>Creiamo la prima pagina web</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, accusantium! Debitis, autem expedita! Vel voluptatem eos velit et natus itaque fugit fuga quo blanditiis voluptas nulla, iste consequuntur sequi eum.</p>
-                    <i class="ri-arrow-down-line"></i>
-                    <button class="btn"> Scopri </button>
+                    <h1 class="split">Make it easy,</h1>
+                    <h1 class="split">but significant.</h1>
                 </div>
+               
             </section>
-            <section class="about-us" id="ChiSiamo">
-<h1>Chi Siamo</h1>
-<div class="about-content">
-<div class="about-content-left">
-<h3>Ti hanno mai mandato all'Inferno?</h3>
-<p>Ebbene, qui trovi tutto quello che ti hanno augurato
-						gli autisti che sorpassavi prima che svoltassero a destra,
-						le donne che hai deluso o gli uomini che hai tradito,
-						quelli che stavano dietro di te in coda quando il semaforo diventava verde e tu non partivi,
-						il cameriere del ristorante in cui rimandasti indietro il piatto,
-						il compagno di classe che smutandavi o quello a cui non passavi i compiti.
-&Egrave; ORA DI PAGARE!!!</p>
-</div>
-<div class="about-content-right">
-<img src="./web developer.jpg">
-</div>
-</div>
-</section>
-            <section class="features" id="Servizi">
-				<h1>Servizi</h1>
-				<div class="feature-row">
-					<div class="feature-box red">
-						<img src="./web developer.jpg" alt="">
-						<h3>Box red</h3>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam a possimus nulla.</p>
-						<button class="btn">SCOPRI</button>
-					</div>
-					<div class="feature-box yellow">
-						<img src="./web developer.jpg" alt="">
-						<h3>Box yellow</h3>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam a possimus nulla.</p>
-						<button class="btn">SCOPRI</button>
-					</div>
-				</div>
-				<div class="feature-row">
-					<div class="feature-box blue">
-						<img src="./web developer.jpg" alt="">
-						<h3>Box blue</h3>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam a possimus nulla.</p>
-						<button class="btn">SCOPRI</button>
-					</div>
-					<div class="feature-box green">
-						<img src="./web developer.jpg" alt="">
-						<h3>Box green</h3>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam a possimus nulla.</p>
-						<button class="btn">SCOPRI</button>
-					</div>
-				</div>
-			</section>
-            <div id="parallax"></div>
-            <section class="portfolio" id="Portfolio">
-                <h1>Portfolio</h1>
-                <div class="portfolio-row">
-                    <div class="portfolio-box primo">
-                        <h1>Lavoro 1</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                    <div class="portfolio-box secondo">
-                        <h1>Lavoro 2</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                    <div class="portfolio-box terzo">
-                        <h1>Lavoro 3</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                </div>
-                <div class="portfolio-row">
-                    <div class="portfolio-box quarto">
-                        <h1>Lavoro 4</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                    <div class="portfolio-box quinto">
-                        <h1>Lavoro 5</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                    <div class="portfolio-box sesto">
-                        <h1>Lavoro 6</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                </div>
-                <div class="portfolio-row">
-                    <div class="portfolio-box settimo">
-                        <h1>Lavoro 7</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                    <div class="portfolio-box ottavo">
-                        <h1>Lavoro 8</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
-                    </div>
-                    <div class="portfolio-box nono">
-                        <h1>Lavoro 9</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum soluta labore quia animi pariatur excepturi modi iste maxime rerum voluptas molestias, ipsum facilis dignissimos ipsam alias assumenda veniam dolor placeat?</p>
+            
+            <section class="horizontal-wrapper">
+                
+                <div class="about panel">
+                    <div class="progettazioneImg"></div>
+                    <div class="about-content">
+                        <h3 class="h3-split-about progettazione"><span>01.</span> Ascolto & Strategia</h3>
+                        <p class="p-split-about1">Ogni progetto inizia con un dialogo approfondito: vogliamo conoscere la tua azienda, i tuoi obiettivi, il tuo pubblico e la tua visione. 
+                            Analizziamo il mercato in cui operi, i tuoi punti di forza e quelli da migliorare. 
+                            Da qui costruiamo una strategia digitale personalizzata, pensata per essere efficace, coerente e sostenibile nel tempo. 
+                            Nessuna soluzione standard: ogni brand ha una storia unica da raccontare, e il nostro compito è darle forma e direzione.</p>
                     </div>
                 </div>
 
+                 <div class="about panel">
+                    <div class="realizzazioneImg"></div>
+                    <div class="about-content-realizzazione">
+                        <h3 class="h3-split-about realizzazione"><span>02.</span> Design: Web,Logo,Grafica</h3>
+                        <p class="p-split-about2">Crediamo nel potere del design funzionale ed emozionale. 
+                            Realizziamo siti web moderni e performanti, loghi distintivi e materiali grafici coerenti con la tua brand identity. 
+                            Ogni elemento visivo è progettato per comunicare valori, creare connessione e trasmettere professionalità. 
+                            Dai colori alla tipografia, dal layout alla user experience: tutto è pensato per lasciare il segno e garantire coerenza in ogni punto di contatto col tuo pubblico.</p>
+                        </div>
+                    </div>
+
+                <div class="about panel">
+                    <div class="assistenzaImg"></div>
+                        <div class="about-content-assistenza">
+                        <h3 class="h3-split-about assistenza"><span>03.</span> Marketing & Promozione</h3>
+                        <p class="p-split-about3">Creiamo e gestiamo campagne pubblicitarie mirate (Google Ads, Meta, Instagram) e piani editoriali per i social, con l’obiettivo di far crescere la tua visibilità, generare contatti e aumentare le conversioni. Ogni strategia è basata sui dati: monitoriamo le performance, ottimizziamo costantemente e ti forniamo report chiari. Con Kodo, il tuo brand non solo è online, ma è attivo, presente e competitivo.</p>
+                        </div>
+                    </div>
+
+                <div class="about panel">
+                    <div class="marketingImg"></div>
+                        <div class="about-content-marketing">
+                        <h3 class="h3-split-about assistenza"><span>04.</span> Copywriting & SEO</h3>
+                        <p class="p-split-about4">Le parole contano. Per questo scriviamo testi che non solo descrivono ciò che fai, ma trasmettono valore, costruiscono fiducia e invogliano all’azione. Ogni contenuto è studiato per essere leggibile, emozionale e ottimizzato per i motori di ricerca. Lavoriamo sulla SEO on-page, dalla struttura ai meta tag, fino alla scelta delle keyword più strategiche. Il risultato? Un sito che comunica con chiarezza e si fa trovare facilmente.</p>
+                        </div>
+                    </div>
+            
             </section>
 
-            <section class="contatti" id="Contatti">
-                <div class="form-contatti">
-                    <h2>Contattaci</h2>
-                    <p>Compila il form per contattarci</p>
-
-                    <form action="mailto:davidelacanfora@gmail.com" method="post" enctype="text/plain">
-                        <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" required>
+            <section class="portfolio">
+                <div class="ascolto boxRilievo">
+                    <div class="overlayProcess"><h3 class="titleOverlay">Progettazione & design grafico</h3></div>
+                    <div class="overlayProcessBlack"></div>
+                    <div class="card">
+                        <h5>Progettazione & design grafico</h5>
+                        <p>Studio architetture informative e interfacce grafiche che uniscono estetica e funzionalità. 
+                            Parto dall’analisi del brand e degli obiettivi per creare layout personalizzati, wireframe e prototipi interattivi. 
+                            Ogni elemento visivo è pensato per guidare l’utente, migliorare la leggibilità e massimizzare il tasso di conversione. 
+                            L’approccio è UX/UI-oriented, con attenzione al responsive design e all’accessibilità.
+                            </p>
+                            <ul class="webDesign">
+                            <li><h6>Progettazione UX/UI -</h6><span> Architetture informative e interfacce orientate all’usabilità.</span></li>
+                            <li><h6>Analisi brand e obiettivi -</h6><span> Struttura progettata in funzione di identità e conversione. </span></li>
+                            <li><h6>Prototipazione e layout personalizzati -</h6><span> Validazione di layout e flussi prima dello sviluppo. </span></li>
+                            <li><h6>Performance, responsive e accessibilità -</h6><span> Design ottimizzato per ogni dispositivo e utente. </span></li>
+                        </ul>
+                    </div>
+                    <div class="ascoltoContent">
+                        <div class="swiper slider1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>
                         </div>
-                          <div class="form-group">
-                            <label for="cognome">Cognome</label>
-                            <input type="text" id="cognome" name="cognome" required>
+                    </div>
+                </div>
+                
+                <div class="design boxRilievo">
+                    <div class="overlayProcess2"><h3 class="titleOverlay2">Sviluppo & Realizzazione</h3></div>
+                    <div class="overlayProcessBlack2"></div>
+                    <div class="designCard">
+                        <h5>Sviluppo & Realizzazione</h5>
+                        <p>Trasformiamo il progetto grafico in un sito web ad alte prestazioni, ottimizzato e sicuro. Adottiamo un approccio mobile-first per garantire un’esperienza ottimale su ogni dispositivo, con tempi di caricamento rapidi e compatibilità cross-browser. Ogni implementazione segue le best practice di accessibilità e SEO tecnica, con un codice pulito, scalabile e facilmente manutentabile.</p>
+                        <ul class="webDesign">
+                            <li><h6>Sviluppo performante -</h6><span> Implementazione ottimizzata per velocità e stabilità. </span></li>
+                            <li><h6>Mobile-first & cross-browser -</h6><span> Esperienza coerente su ogni dispositivo e browser. </span></li>
+                            <li><h6>Copy & SEO -</h6><span> Struttura conforme alle best practice di indicizzazione e usabilità. </span></li>
+                            <li><h6>Struttura pulita e scalabile -</h6><span> Architettura manutenibile e pronta per evoluzioni future. </span></li>
+                        </ul>
+                    </div>
+                    <div class="designContent">
+                        <div class="swiper slider2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>
                         </div>
-
-                         <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="marketing boxRilievo">
+                    <div class="overlayProcess3"><h3 class="titleOverlay3">Assistenza & Gestione</h3></div>
+                    <div class="overlayProcessBlack3"></div>
+                    <div class="marketingCard">
+                        <h5>Assistenza & Gestione</h5>
+                        <p>Offriamo un servizio continuativo di manutenzione e aggiornamento del sito, per garantire stabilità, sicurezza e performance nel tempo. Ci occupiamo di backup periodici, monitoraggio uptime, ottimizzazione delle performance e aggiornamento di plugin, tema e core del CMS utilizzato. Su richiesta, forniamo formazione personalizzata e video tutorial per permettere al cliente di gestire in autonomia contenuti e sezioni del sito</p>
+                        <ul class="webDesign">
+                            <li><h6>Manutenzione continuativa -</h6><span> Aggiornamenti costanti per garantire stabilità e sicurezza. </span></li>
+                            <li><h6>Backup & monitoraggio -</h6><span> Controllo uptime e ripristino dati programmato. </span></li>
+                            <li><h6>Ottimizzazione performance -</h6><span> Aggiornamento di core, tema e plugin con focus su efficienza. </span></li>
+                            <li><h6>Formazione dedicata -</h6><span> Supporto e tutorial per gestione autonoma dei contenuti. </span></li>
+                        </ul>
+                    </div>
+                    <div class="marketingContent">
+                        <div class="swiper slider3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>
                         </div>
-                         <div class="form-group">
-                            <label for="tel">Telefono</label>
-                            <input type="number" id="tel" name="tel" required>
-                        </div>
-                         <div class="form-group">
-                            <label for="message">Messaggio</label>
-                            <textarea id="message" name="message" rows="5"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn">Invia
-
-                        </button>
-
-
-                    </form>
-
+                    </div>
                 </div>
             </section>
+            <section class="sitiRealizzati">
+                <div class="clippy-container">
+                    <hr>
+                    <div><h3>01.</h3></div>
+                    <div class="sitiContent">
+                        <div class="sitiTesto">
+                            <h3>Battistelli Immobiliare</h3>
+                            <p>Sito web realizzato per Battistelli Immobiliare, agenzia attiva nel territorio umbro con una consolidata esperienza nella compravendita e locazione di immobili residenziali, commerciali e di pregio.<br><br>
+
+                                Il sito è stato progettato per offrire un’esperienza di navigazione fluida e moderna, con un’interfaccia pulita che valorizza ogni immobile attraverso gallerie fotografiche curate e schede tecniche dettagliate.<br><br>
+
+                                Il cuore del progetto è un database dinamico che raccoglie tutte le proprietà disponibili, con un sistema di filtri avanzati che consente agli utenti di cercare facilmente l’immobile più adatto alle proprie esigenze, in base a criteri come tipologia, prezzo, zona e metratura.<br><br>
+
+                                È stato inoltre integrato un form dedicato alla valutazione immobiliare, che permette ai proprietari di richiedere una stima gratuita del proprio immobile in modo semplice e veloce, contribuendo a generare nuovi contatti per l’agenzia.</p>
+                            <button class="btn">Vedi sito</button>
+                        </div>
+                        <div class="sitiImmagine">
+                            <img class="cursor-img" src="battistelli-responsive-transparent.webp" alt="sito battistelli">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clippy-container">
+                    <hr>
+                    <div><h3>02.</h3></div>
+                    <div class="sitiContent">
+                        <div class="sitiTesto">
+                            <h3>Davide Pastocchi</h3>
+                            <p>Sito web creato per Davide Pastocchi, un talentuoso artigiano che ha recentemente inaugurato la sua sartoria su misura nel borgo di Perugia. La sartoria di Davide è specializzata in abiti da uomo, confezionati seguendo le antiche tradizioni sartoriali e utilizzando solo tessuti di alta qualità.<br><br>
+                                Il sito web è stato progettato per riflettere la maestria e l’arte sartoriale di Davide.<br><br>
+                                Particolare cura è stata dedicata all’aspetto visivo del sito, con varie gallerie fotografiche che mostrano esempi delle creazioni di Davide, dando ai visitatori una visione immediata della qualità e dello stile unico dei suoi abiti.<br><br>
+                                Il risultato è un sito web che non solo celebra l’arte della sartoria classica ma offre anche una piattaforma funzionale e accattivante per attirare nuovi clienti e appassionati di moda.</p>
+                            <button class="btn">Vedi sito</button>
+
+                        </div>
+                        <div class="sitiImmagine">
+                            <img class="cursor-img" src="davidepastocchi-responsive-transparent.webp" alt="sito battistelli">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clippy-container">
+                    <hr>
+                    <div><h3>03.</h3></div>
+                    <div class="sitiContent">
+                        <div class="sitiTesto">
+                            <h3>Tipografia Grifani Donati</h3>
+                            <p>La realizzazione del sito web per la storica tipografia Grifani Donati, fondata nel 1799, è stata un progetto affascinante. Il sito web è stato diviso in due parti, una dedicata alla tipografia e l’altra al museo. <br><br>
+                                Il sito è stato costruito con un design moderno, elegante e raffinato, in linea con l’atmosfera unica e l’esperienza secolare dell’azienda.<br><br>
+                                Inoltre, particolare attenzione è stata prestata all’usabilità del sito, garantendo una navigazione semplice e intuitiva per gli utenti.<br><br>
+                                Il risultato finale è stato un sito web accattivante e funzionale, in grado di valorizzare al meglio la tipografia Grifani Donati e la sua storia centenaria.</p>
+                            <button class="btn">Vedi sito</button>
+
+                        </div>
+                        <div class="sitiImmagine">
+                            <img class="cursor-img" src="tipografia-responsive-transparent.webp" alt="sito battistelli">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clippy-container">
+                    <hr>
+                    <div><h3>04.</h3></div>
+                    <div class="sitiContent">
+                        <div class="sitiTesto">
+                            <h3>Progetto Home Staging</h3>
+                            <p>Abbiamo realizzato il sito web per Progetto Home Staging, con l’obiettivo di valorizzare la trasformazione degli spazi abitativi in ambienti accoglienti e funzionali. <br><br>
+                                Il progetto combina un design pulito ed elegante con un’interfaccia intuitiva, studiata per trasmettere la professionalità e l’identità del brand. Abbiamo integrato un blog tematico e un portfolio visivo, arricchito da gallery fotografiche capaci di raccontare l’efficacia degli interventi svolti. <br><br>
+                                Il sito integra una sezione blog dedicata all’approfondimento delle tematiche legate al mondo dell’home staging, con contenuti utili e aggiornati pensati per coinvolgere il pubblico e rafforzare la brand authority. <br><br>
+                                Abbiamo inoltre valorizzato il portfolio attraverso gallery fotografiche ad alto impatto, in grado di raccontare visivamente il processo di trasformazione degli ambienti e l’efficacia degli interventi svolti. <br><br>
+                                Un progetto pensato per comunicare valore, estetica e strategia in modo coerente e distintivo.</p>
+                            <button class="btn">Vedi sito</button>
+
+                        </div>
+                        <div class="sitiImmagine">
+                            <img class="cursor-img" src="prog-home-stag-transp.webp" alt="sito battistelli">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clippy-container">
+                    <hr>
+                    <div><h3>05.</h3></div>
+                    <div class="sitiContent">
+                        <div class="sitiTesto">
+                            <h3>Selit</h3>
+                            <p>L’esperienza di creare il sito web per Selit, un punto di riferimento nel panorama delle reti di telecomunicazioni wireless e cablate, è stata stimolante e coinvolgente. <br><br>
+                                Abbiamo strutturato il sito in tre sezioni fondamentali, ognuna focalizzata sui principali servizi offerti: isolamento termico, isolamento acustico e soluzioni personalizzate. Il design del sito è una fusione di modernità, raffinatezza ed eleganza, in perfetta armonia con l’identità unica di Selit nel settore. <br><br>
+                                Abbiamo dedicato particolare attenzione all’esperienza dell’utente, garantendo una navigazione fluida e intuitiva. Il risultato è stato un sito web accattivante e altamente funzionale, capace di riflettere in modo magistrale l’ampia gamma di soluzioni offerte e l’esperienza consolidata di Selit nel campo delle telecomunicazioni. <br><br>
+                                Il sito offre una piattaforma coinvolgente per esplorare i nostri servizi e i progetti realizzati in passato, trasmettendo con efficacia la nostra passione e il nostro impegno nel fornire soluzioni di connettività all’avanguardia ai nostri clienti.</p>
+                            <button class="btn">Vedi sito</button>
+
+                        </div>
+                        <div class="sitiImmagine">
+                            <img class="cursor-img" src="selit-transparent.webp" alt="sito battistelli">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
-        <footer></footer>
+        <footer>
+
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.3/umd/index.min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+           <script src="script.js"></script>
+
     </body>
-
 </html>
-
-
-
-
-
-
-
-
