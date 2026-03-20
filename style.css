@@ -588,8 +588,19 @@ footer{
 	justify-content:space-between;
 }
 
-footer img{
+.footerInformazioniLeft img{
 	width:16px;
 	height:auto;
-	{
+}
+
+.footerInformazioniRight img{
+	width:16px;
+	height:auto;
+}
+
+.footerInformazioniLeft, .footerInformazioniRight{
+	display: flex;
+	gap: 5px;
+}
+    
     
