@@ -581,4 +581,12 @@ z-index: 1;
   margin-top: 20px;
 
 }
+
+footer{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+
     
