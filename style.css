@@ -586,21 +586,29 @@ footer{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
+	padding: 20px;
 }
 
 .footerInformazioniLeft img{
 	width:16px;
 	height:auto;
+    fill:white;
 }
 
 .footerInformazioniRight img{
 	width:16px;
 	height:auto;
+	fill:white;
 }
 
 .footerInformazioniLeft, .footerInformazioniRight{
 	display: flex;
 	gap: 5px;
 }
-    
+
+.footerInformazioniLeft h5, .footerInformazioniRight h5{
+	font-size:16px;
+}
+
+
     
