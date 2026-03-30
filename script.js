@@ -153,6 +153,56 @@ gsap.fromTo(el,
   );
 });
 
+document.querySelectorAll(".skill").forEach(skill => {
+
+  const fill = skill.querySelector(".skill-fill");
+  const number = skill.querySelector(".skill-number");
+
+  const value = fill.getAttribute("data-progress");
+
+  let obj = { val: 0 };
+
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: skill,
+      start: "top 80%",
+      toggleActions: "restart none none reverse"
+    }
+  })
+  
+  // barra
+  .to(fill,{
+    scaleX: value / 100,
+    duration: 1.2,
+    ease: "power3.out"
+  })
+  
+  // numero
+  .to(obj,{
+    val: value,
+    duration: 1.2,
+    ease: "power3.out",
+    onUpdate: () => {
+      number.textContent = Math.round(obj.val) + "%";
+    }
+  }, 0);
+  
+});
+
+gsap.fromTo(".baloon",{
+  clipPath: "circle(0.0% at 50% 50%)"},
+  { clipPath: "circle(70.7% at 50% 50%)",
+    duration: 1.2,
+      delay: 0.2,
+      ease: "power2.out",
+    scrollTrigger: {
+      trigger:".baloon",
+      toggleActions: "restart pause pause reverse",
+      start:"center bottom"
+    }
+
+  });
+
        document.querySelectorAll(".clippy-container").forEach(el => {
 
   gsap.fromTo(el,
@@ -162,10 +212,9 @@ gsap.fromTo(el,
       scrollTrigger: {
         trigger: el,
         start: "top 70%",
-        end: "bottom 70%",
+        end: "bottom 80%",
         toggleActions: "restart pause pause reverse",
         scrub: 4,
-        markers: true
       }
     }
   );
@@ -291,7 +340,7 @@ const splitProgettazioneText = new SplitType(".p-split-about1",{
 gsap.from(splitProgettazioneText.words,{
   duration: 1,
   stagger: 0.05, 
-  color: "#2d2d2dff",
+  color: "rgb(146, 146, 146)",
   scrollTrigger: {
     trigger: ".p-split-about1",
     start: "30% 100%",
@@ -309,7 +358,7 @@ document.querySelectorAll(".p-split-about2, .p-split-about3, .p-split-about4").f
   gsap.from(splitAboutText.words, {
     duration: 1,
   stagger: 0.05, 
-  color: "#2d2d2dff",
+  color: "rgb(146, 146, 146)",
   scrollTrigger: {
     trigger: el,
     start: "30% 100%",
@@ -322,13 +371,32 @@ document.querySelectorAll(".p-split-about2, .p-split-about3, .p-split-about4").f
 
 });
 
+document.querySelectorAll(".compare").forEach(el => {
+
+  const splitAboutText = new SplitType(el, {
+    types: "words"
+  });
+
+  gsap.from(splitAboutText.words, {
+    duration: 0.8,
+  stagger: 0.03, 
+  autoAlpha: 0,
+  scrollTrigger: {
+    trigger: el,
+    toggleActions: "restart pause pause reverse",
+    }
+  });
+
 });
+
+});
+
+
 
 // cursore
 
 if (window.innerWidth >= 1024) {
   const cursor = document.querySelector(".cursor");
-  const cursorText = cursor.querySelector(".text");
 
   document.addEventListener("mousemove", (e) => {
     gsap.to(cursor, {
@@ -339,14 +407,13 @@ if (window.innerWidth >= 1024) {
     });
   });
 
-  const elements = document.querySelectorAll(".animate-cursor");
+  const elements = document.querySelectorAll("a");
   elements.forEach((element) => {
     element.addEventListener("mouseover", () => {
       gsap.to(cursor, {
         scale: 1.5,
         duration: 0.4,
         ease: "power1.out",
-        mixBlendMode: "difference",
       });
       cursorText.innerText = "";
     });
@@ -356,30 +423,6 @@ if (window.innerWidth >= 1024) {
         scale: 1,
         duration: 0.4,
         ease: "power1.out",
-        mixBlendMode: "difference",
-      });
-      cursorText.innerText = "";
-    });
-  });
-
-  const imgElements = document.querySelectorAll(".animate-cursor-img");
-  imgElements.forEach((element) => {
-    element.addEventListener("mouseover", () => {
-      gsap.to(cursor, {
-        scale: 4.5,
-        duration: 0.4,
-        ease: "power1.out",
-        mixBlendMode: "normal",
-      });
-      cursorText.innerText = "Go to site!";
-    });
-
-    element.addEventListener("mouseout", () => {
-      gsap.to(cursor, {
-        scale: 1,
-        duration: 0.4,
-        ease: "power1.out",
-        mixBlendMode: "difference",
       });
       cursorText.innerText = "";
     });

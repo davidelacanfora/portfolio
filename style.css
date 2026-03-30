@@ -33,17 +33,25 @@ h5{
 
 h6{
     font-size: 18px;
-    border: 1px solid #00FF85 ;
+    border: 2px solid #00FF85 ;
     border-radius: 20px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     padding: 8px;
 }
 
-p, span{
+p{
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
     font-size: 22px;
+    color: #e4e4e4;
+}
+
+span{
+  font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 18px;
     color: #e4e4e4;
 }
 
@@ -55,10 +63,20 @@ a{
     color: #fff;
     text-decoration: none;
     letter-spacing: 1.2px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+
+    
 }
 
+a:hover{
+  color: #00FF85;
+  transform: skewX(-10deg);
+}
+
+
 body{
-    background-color:#111;
+    background-color:#580bcd;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -68,14 +86,14 @@ body{
 
 ::selection{
 	background-color:#00FF85 !important;
-  color:#111!important;
+  color:#4a1894!important;
 }
 ::-webkit-scrollbar {
   width: 6px;
   
 }
 ::-webkit-scrollbar-track {
-  background: #111; 
+  background: #4a1894; 
 }
 ::-webkit-scrollbar-thumb {
   background:#00FF85;
@@ -83,7 +101,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: lightgrey; 
+  background: white; 
 }
 
 /*cursore*/
@@ -98,28 +116,11 @@ body{
   height: 22px;
   border-radius: 50%;
   background-color: #00FF85;
-		opacity:0.9;
+	mix-blend-mode: difference;
   pointer-events: none;
   z-index: 10000000!important;
 }
 	
-.text {
-	
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white!important;
-  font-size: 4px!important;
-  font-weight: 600;
-	font-family: "Space Mono"!important;
-	text-transform:uppercase;
-	align-content:center;
-	text-align: center;
-	line-height:1;
-	padding: 10px;
-	
-}
 
 .click-cursor {
   position: fixed;
@@ -138,13 +139,6 @@ body{
 	animation: cursor-scale 0.4s ease-in-out alternate infinite;
 }
 
-}
-
-
-
-.contenitore-lingua img {
-height: 13px! important;
-width: auto! important;
 }
 
 header {
@@ -240,8 +234,8 @@ header {
 
 .progettazioneImg {
     width: 50%;
-    background-image: url(acolto.webp);
-    background-position: center;
+    background-image: url(ascoltoestrategia.jpg);
+    background-position: left;
     background-size: cover;
     height: 100vh;
    mask-size: contain;
@@ -257,9 +251,11 @@ z-index: 1;
 
 .realizzazioneImg{
     width: 50%;
-    background-image: url(desigweb.webp);
+    background-image: url(design.jpg);
     background-position: center;
     background-size: cover;
+    mask-size: contain;
+mask-position: center;
     height: 100vh;
     -webkit-mask-image: url(logo-webmaster.svg);
   mask-image: url(logo-webmaster.svg);
@@ -269,24 +265,28 @@ z-index: 1;
 
 .assistenzaImg {
     width: 50%;
-    background-image: url(promozione.webp);
+    background-image: url(marketing.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
     -webkit-mask-image: url(logo-webmaster.svg);
   mask-image: url(logo-webmaster.svg);
   mask-repeat: no-repeat;
+  mask-size: contain;
+mask-position: center;
 }
 
 .marketingImg {
     width: 50%;
-    background-image: url(promozione.webp);
+    background-image: url(copy-seo.jpg);
     background-position: center;
     background-size: cover;
     height: 100vh;
     -webkit-mask-image: url(logo-webmaster.svg);
   mask-image: url(logo-webmaster.svg);
   mask-repeat: no-repeat;
+  mask-size: contain;
+mask-position: center;
   transform: scaleX(-1);
 }
 
@@ -486,7 +486,7 @@ z-index: 1;
         overflow: hidden;
     }
      .overlayProcessBlack, .overlayProcessBlack2, .overlayProcessBlack3{
-        background-color: rgb(33, 33, 33);
+        background-color: #4a1894;
         position: absolute;
         top: 0;
         left: 0;
@@ -499,7 +499,7 @@ z-index: 1;
     }
 
     .titleOverlay, .titleOverlay2, .titleOverlay3{
-        background-color: #111;
+        background-color: #580bcd;
         position: absolute;
         top: 10%;
         left: 5%;
@@ -511,22 +511,19 @@ z-index: 1;
 
     .boxRilievo {
   box-shadow:
-    8px 8px 10px rgba(0, 0, 0, 0),  /* trasparente al posto di prima */
-    -8px -8px 10px rgba(255, 255, 255, 0), /* trasparente */
-    inset 8px 8px 12px rgba(0, 0, 0, 1),
-    inset -8px -8px 12px rgba(255, 255, 255, 0.1);
-    padding: 80px;
+    inset 6px 6px 10px rgba(20, 0, 60, 0.8),
+  inset -6px -6px 10px rgba(120, 80, 255, 0.3);
+    padding: 40px;
     border-radius: 80px;
 }
 
 .sitiRealizzati{
-  min-height: 300vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 120px;
   padding: 200px 40px;
+  gap: 120px;
 }
 
 .clippy-container{
@@ -535,7 +532,9 @@ z-index: 1;
   justify-content: center;
   position: relative;
   width: 95%;
+  border-radius: 0px 0px 80px 80px;
 }
+
 
 .sitiContent{
   display: flex;
@@ -543,6 +542,7 @@ z-index: 1;
   justify-content: center;
   align-items: center;
   gap: 40px;
+  padding: 40px;
 }
 
 .sitiTesto, .sitiImmagine{
@@ -553,7 +553,6 @@ z-index: 1;
   justify-content: center;
   gap: 20px;
 }
-
 
 .clippy-container:hover .cursor-img{
   opacity: 1;
@@ -570,46 +569,248 @@ z-index: 1;
 
 .btn{
   background-color: #00FF85;
-  color: #111;
   border: none;
+  border-radius: 20px;
+  margin-top: 20px;
   padding: 20px 40px;
+
+}
+
+.btn:hover{
+  border-radius: 40px 10px 40px 10px;
+}
+
+.btn span{
+  color: #111;
   font-family: "Space Mono", sans-serif;
   font-weight: 500;
   font-size: 22px;
   text-transform: uppercase;
-  border-radius: 20px;
-  margin-top: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  
+}
 
+.btn:hover span{
+  transform: skewX(-10deg);
+}
+    
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+#about{
+  width: 100%;
+  padding: 200px 40px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.aboutMe{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 95%;
+}
+
+.formazione, .competenze{
+  width: 50%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.formazione img{
+  width: 85%;
+  margin-top: 40px;
+  border-radius: 40px;
+}
+
+
+li{
+  list-style: none;
+}
+
+.skill{
+  margin-top: 40px;
+}
+
+.skill-top{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+}
+
+.skill-bar{
+  width:100%;
+  height:8px;
+  background:#1a1a1a;
+  border-radius:20px;
+}
+
+.skill-fill{
+  height:100%;
+  width:100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #00FF85;
+  border-radius:20px;
+  box-shadow:
+    0 0 10px #00FF85,
+    0 0 10px #00FF85;
+}
+
+.titoliStudio{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1025px) {
+  
+  h1{
+    font-size: 75px;
+  }
+  h3{
+    font-size: 35px;
+  }
+
+  h5{
+    font-size: 30px;
+  }
+
+  h6{
+    letter-spacing: 0.4px;
+    font-size: 16px;
+  }
+
+  span{
+    font-size: 16px;
+  }
+
+  .h3-split-about span {
+    font-size: 35px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  .panel{
+    padding: 20px;
+  }
+
+  .about-content, .about-content-realizzazione, .about-content-assistenza, .about-content-marketing{
+    padding: 20px;
+  }
+
+  .portfolio{
+    padding: 60px 20px;
+  }
+
+  .ascolto, .design, .marketing, .aboutMe, .sitiContent{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card, .ascoltoContent, .designContent, .designCard, .marketingCard, .marketingContent, .formazione, .competenze, .sitiTesto, .sitiImmagine{
+    width: 100%;
+  }
+
+  #about{
+    padding: 60px 40px;
+  }
+
+  .sitiRealizzati{
+    padding: 60px 40px;
+  }
+
+  .cursor-img{
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 769px){
+
+  h1{
+    font-size: 35px;
+  }
+
+  h3{
+    font-size: 25px;
+  }
+
+  header{
+    justify-content: center;
+  }
+
+  .contenitore-menu{
+    display: none;
+  }
+
+  .hero{
+    min-height: 70vh;
+  }
+
+   .panel{
+    padding: 40px 20px;
+    flex-direction: column;
+   }
+
+   .about-content, .about-content-realizzazione, .about-content-assistenza, .about-content-marketing{
+    width: 100%;
+  }
+
+  .realizzazioneImg, .assistenzaImg, .progettazioneImg, .marketingImg{
+    width: 100%;
+  }
+
+  .titleOverlay, .titleOverlay2, .titleOverlay3 {
+    left: 0%;
+    border-radius: 0px;
+}
+
+.card{
+  padding: 40px 20px;
+}
+  .boxRilievo {
+    padding: 10px;
+}
+
+.formazione img{
+  width: 100%;
+}
+
+.webDesign li {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.sitiContent{
+  padding: 20px 0px;
+}
+
+.sitiRealizzati{
+  padding: 40px 20px;
+  gap: 40px;
 }
 
 footer{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	padding: 20px;
-}
-
-.footerInformazioniLeft img{
-	width:16px;
-	height:auto;
-    fill:white;
-	filter: invert(1);
-}
-
-.footerInformazioniRight img{
-	width:16px;
-	height:auto;
-	fill:white;
-}
-
-.footerInformazioniLeft, .footerInformazioniRight{
-	display: flex;
-	gap: 5px;
-}
-
-.footerInformazioniLeft h5, .footerInformazioniRight h5{
-	font-size:16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 
-    
+}
