@@ -120,24 +120,6 @@ body{
   pointer-events: none;
   z-index: 10000000!important;
 }
-	
-
-.click-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-	border:2px solid white;
-  border-radius: 50%;
-  background-color: whitesmoke;
-  pointer-events: none;
-  z-index: 10000000!important;
-  mix-blend-mode: difference;
-	opacity:0.3;
-	filter: blur(5px);
-	animation: cursor-scale 0.4s ease-in-out alternate infinite;
-}
 
 }
 
@@ -230,6 +212,111 @@ header {
     padding: 40px;
     transform: scale(0.6);
     transform-origin: center center;
+}
+
+.aboutMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: none;
+
+}
+
+.about-contentMobile, .about-content-realizzazioneMobile, .about-content-assistenzaMobile, .about-content-marketingMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    transform: scale(0.6);
+    transform-origin: center center;
+}
+
+.progettazioneImgMobile {
+    width: 95%;
+    background-image: url(ascoltoestrategia.jpg);
+    background-position: left;
+    background-size: cover;
+    height: 50vh;
+   mask-size: contain;
+mask-position: center;
+mask-repeat: no-repeat;
+mask-image: url(logo-webmaster.svg);
+-webkit-mask-image: url(logo-webmaster.svg);
+-webkit-mask-size: contain;
+-webkit-mask-position: center;
+-webkit-mask-repeat: no-repeat;
+z-index: 1;
+}
+
+.realizzazioneImgMobile{
+    width: 95%;
+    background-image: url(design.jpg);
+    background-position: center;
+    background-size: cover;
+    mask-size: contain;
+mask-position: center;
+    height: 50vh;
+    -webkit-mask-image: url(logo-webmaster.svg);
+  mask-image: url(logo-webmaster.svg);
+  mask-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.assistenzaImgMobile {
+    width: 95%;
+    background-image: url(marketing.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    -webkit-mask-image: url(logo-webmaster.svg);
+  mask-image: url(logo-webmaster.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+mask-position: center;
+}
+
+.marketingImgMobile {
+    width: 95%;
+    background-image: url(copy-seo.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    -webkit-mask-image: url(logo-webmaster.svg);
+  mask-image: url(logo-webmaster.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+mask-position: center;
+  transform: scaleX(-1);
+}
+
+.h3-split-aboutMobile span{
+    color: #111;
+    background-color: #00FF85;
+    padding: 4px;
+    border-radius: 8px;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.horizontal-wrapperMobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 0px;
+}
+
+.panelMoblie {
+  flex: 0 0 100%;
+  width: 100vw;
+  gap: 20px;
 }
 
 .progettazioneImg {
@@ -702,6 +789,10 @@ li{
     font-size: 18px;
   }
 
+  #servizi{
+    display: none;
+  }
+
   .panel{
     padding: 20px;
   }
@@ -772,28 +863,26 @@ li{
   }
 
   .titleOverlay, .titleOverlay2, .titleOverlay3 {
-    left: 0%;
-    border-radius: 0px;
+    margin-right: 5%;
 }
 
 .card{
   padding: 40px 20px;
 }
   .boxRilievo {
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 .formazione img{
   width: 100%;
 }
 
-.webDesign li {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-    padding: 20px 10px;
+.webDesign {
+    display: none;
+}
+
+.swiper{
+  height: 300px!important;
 }
 
 .sitiContent{
@@ -813,4 +902,12 @@ footer{
 }
 
 
+}
+
+@media screen and (min-width: 1025px) {
+
+  #serviziMobile{
+    display: none;
+  }
+  
 }

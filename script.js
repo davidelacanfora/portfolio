@@ -33,63 +33,151 @@ window.addEventListener("scroll", () => {
     lastScroll = current;
 });
 
+const mm = gsap.matchMedia();
 
 
-gsap.utils.toArray(".btn").forEach((btn) => {
-  gsap.from(btn, {
+// ✅ DESKTOP
+mm.add("(min-width: 1024px)", () => {
+
+  let sections = gsap.utils.toArray(".panel");
+
+  const horizontalScroll = gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
     scrollTrigger: {
-      trigger: btn,          // usa ogni singolo elemento come trigger
-      start: "top 80%",      // punto di partenza dell’animazione
-      toggleActions: "play none none reverse", // opzionale
-      once: true             // animazione una sola volta
-    },
-    scale: 0,
-    opacity: 0,
-    duration: 0.6,
-    ease: "back.out(1.7)"
+      trigger: ".horizontal-wrapper",
+      pin: true,
+      scrub: 1,
+      end: () => "+=" + document.querySelector(".horizontal-wrapper").offsetWidth
+    }
   });
+
+  document.querySelectorAll(".about-content-realizzazione, .about-content-assistenza, .about-content-marketing").forEach(el => {
+
+    gsap.to(el, {
+      scale: 1,
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 75%",
+        toggleActions: "restart pause pause reverse",
+        containerAnimation: horizontalScroll,
+      }
+    });
+
+  });
+
+  document.querySelectorAll(".realizzazione, .assistenza, .marketingHr").forEach(el => {
+
+    const split = new SplitType(el, { types: "words, chars" });
+
+    gsap.from(split.chars, {
+      duration: 1,
+      x: 20,
+      autoAlpha: 0,
+      filter: "blur(4px)",
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: el,
+        containerAnimation: horizontalScroll,
+        start: "0% 100%",
+        toggleActions: "restart reverse restart reverse",
+      }
+    });
+
+  });
+
+  document.querySelectorAll(".p-split-about2, .p-split-about3, .p-split-about4").forEach(el => {
+
+    const splitAboutText = new SplitType(el, { types: "words, chars" });
+
+    gsap.from(splitAboutText.words, {
+      duration: 1,
+      stagger: 0.05,
+      color: "rgb(146, 146, 146)",
+      scrollTrigger: {
+        trigger: el,
+        start: "30% 100%",
+        end: "+=70%",
+        containerAnimation: horizontalScroll,
+        toggleActions: "restart pause pause reverse",
+        scrub: 4,
+      }
+    });
+
+  });
+
 });
 
 
-gsap.to(".about-content",
-  {
-    scale: 1,
-    duration: 1.2,
-    scrollTrigger: {
-      trigger: ".about",
-      start: "top 75%",
-      toggleActions: "restart pause pause reverse",
-    }
-  }
+// ✅ MOBILE
+mm.add("(max-width: 1023px)", () => {
+
+  document.querySelectorAll(".about-contentMobile, .about-content-realizzazioneMobile, .about-content-assistenzaMobile, .about-content-marketingMobile").forEach(el => {
+
+    gsap.to(el, {
+      scale: 1,
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 75%",
+        toggleActions: "restart pause pause reverse",
+      }
+    });
+
+  });
+
+  document.querySelectorAll(".realizzazioneMobile, .assistenzaMobile, .marketingMobile, .progettazioneMobile").forEach(el => {
+
+    const split = new SplitType(el, { types: "words, chars" });
+
+    gsap.from(split.chars, {
+      duration: 1,
+      x: 20,
+      autoAlpha: 0,
+      filter: "blur(4px)",
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: el,
+        start: "0% 100%",
+        toggleActions: "restart reverse restart reverse",
+      }
+    });
+
+  });
+
+  document.querySelectorAll(".p-split-about1Mobile, .p-split-about2Mobile, .p-split-about3Mobile, .p-split-about4Mobile").forEach(el => {
+
+    const splitAboutText = new SplitType(el, { types: "words, chars" });
+
+    gsap.from(splitAboutText.words, {
+      duration: 1,
+      stagger: 0.05,
+      color: "rgb(146, 146, 146)",
+      scrollTrigger: {
+        trigger: el,
+        start: "30% 100%",
+        end: "+=70%",
+        toggleActions: "restart pause pause reverse",
+        scrub: 4,
+      }
+    });
+
+  });
+
+});
+
+
+
+gsap.to(".about-content", { 
+  scale: 1, duration: 1.2, 
+  scrollTrigger: { 
+    trigger: ".about", start: "top 75%", toggleActions: "restart pause pause reverse", 
+  } 
+} 
 );
 
-let sections = gsap.utils.toArray(".panel");
 
-const horizontalScroll = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".horizontal-wrapper",
-    pin: true,
-    scrub: 1,
-    end: () => "+=" + document.querySelector(".horizontal-wrapper").offsetWidth
-  }
-});
-
-document.querySelectorAll(".about-content-realizzazione, .about-content-assistenza, .about-content-marketing").forEach(el => {
-
-  gsap.to(el, {
-    scale: 1,
-    duration: 1.2,
-    scrollTrigger: {
-      trigger: el,
-      containerAnimation: horizontalScroll,
-      start: "0% 100%",
-      toggleActions: "play reverse restart reverse",
-    }
-  });
-
-});
 
 document.querySelectorAll(".overlayProcess, .overlayProcess2, .overlayProcess3").forEach(el =>{
 
@@ -311,27 +399,6 @@ gsap.from(splitProgettazione.chars, {
     }
 });
 
-document.querySelectorAll(".realizzazione, .assistenza").forEach(el => {
-
-  const split = new SplitType(el, {
-    types: "words, chars"
-  });
-
-  gsap.from(split.chars, {
-    duration: 1,
-    x: 20,
-    autoAlpha: 0,
-    filter: "blur(4px)",
-    stagger: 0.05,
-    scrollTrigger: {
-      trigger: el,
-      containerAnimation: horizontalScroll,
-      start: "0% 100%",
-      toggleActions: "restart reverse restart reverse",
-    }
-  });
-
-});
 
 const splitProgettazioneText = new SplitType(".p-split-about1",{
  types: "words, chars" 
@@ -349,27 +416,6 @@ gsap.from(splitProgettazioneText.words,{
     scrub: 4,}
 });
 
-document.querySelectorAll(".p-split-about2, .p-split-about3, .p-split-about4").forEach(el => {
-
-  const splitAboutText = new SplitType(el, {
-    types: "words, chars"
-  });
-
-  gsap.from(splitAboutText.words, {
-    duration: 1,
-  stagger: 0.05, 
-  color: "rgb(146, 146, 146)",
-  scrollTrigger: {
-    trigger: el,
-    start: "30% 100%",
-    end: "+=70%",
-    containerAnimation: horizontalScroll,
-    toggleActions: "restart pause pause reverse",
-    scrub: 4,
-    }
-  });
-
-});
 
 document.querySelectorAll(".compare").forEach(el => {
 
@@ -415,7 +461,6 @@ if (window.innerWidth >= 1024) {
         duration: 0.4,
         ease: "power1.out",
       });
-      cursorText.innerText = "";
     });
 
     element.addEventListener("mouseout", () => {
@@ -424,26 +469,9 @@ if (window.innerWidth >= 1024) {
         duration: 0.4,
         ease: "power1.out",
       });
-      cursorText.innerText = "";
     });
   });
 
-  // Aggiungi l'evento click a tutti gli elementi della pagina
-  document.addEventListener("click", (e) => {
-    // Crea un elemento di puntatore al clic
-    const clickCursor = document.createElement("div");
-    clickCursor.classList.add("click-cursor");
-    document.body.appendChild(clickCursor);
-
-    // Posiziona il puntatore al clic dove l'utente ha cliccato
-    clickCursor.style.left = e.clientX + "px";
-    clickCursor.style.top = e.clientY + "px";
-
-    // Rimuovi l'elemento del puntatore al clic dopo un breve ritardo
-    setTimeout(() => {
-      document.body.removeChild(clickCursor);
-    }, 800);
-  });
 }
 
 // 🔧 refresh finale
