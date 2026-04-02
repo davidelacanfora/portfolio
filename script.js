@@ -117,7 +117,7 @@ mm.add("(max-width: 1023px)", () => {
 
     gsap.to(el, {
       scale: 1,
-      duration: 1.2,
+      duration: 0.5,
       scrollTrigger: {
         trigger: el,
         start: "top 75%",
