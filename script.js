@@ -365,14 +365,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-// now animate the characters in a staggered fashion
-gsap.to(split.chars, {
-  duration: 1, 
-  y: 0,         // animate from 100px below
-  autoAlpha: 1,
-  filter: "blur(0px)",   // fade in from opacity: 0 and visibility: hidden
-  stagger: 0.05,  // 0.05 seconds between each
-});
+gsap.fromTo(split.chars,
+  {
+    y: 100,
+    autoAlpha: 0,
+    filter: "blur(10px)"
+  },
+  {
+    y: 0,
+    autoAlpha: 1,
+    filter: "blur(0px)",
+    duration: 1,
+    stagger: 0.05,
+    ease: "power3.out"
+  }
+);
 
 
 const splitProgettazione = new SplitType(".progettazione", {
