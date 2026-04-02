@@ -240,7 +240,7 @@ header {
 
 .progettazioneImgMobile {
     width: 95%;
-    background-image: url(ascoltoestrategia.jpg);
+    background-image: url(ascolto.webp);
     background-position: left;
     background-size: cover;
     height: 50vh;
@@ -257,7 +257,7 @@ z-index: 1;
 
 .realizzazioneImgMobile{
     width: 95%;
-    background-image: url(design.jpg);
+    background-image: url(design.webp);
     background-position: center;
     background-size: cover;
     mask-size: contain;
@@ -271,7 +271,7 @@ mask-position: center;
 
 .assistenzaImgMobile {
     width: 95%;
-    background-image: url(marketing.jpg);
+    background-image: url(marketing.webp);
     background-position: center;
     background-size: cover;
     height: 50vh;
@@ -284,7 +284,7 @@ mask-position: center;
 
 .marketingImgMobile {
     width: 95%;
-    background-image: url(copy-seo.jpg);
+    background-image: url(copyseo.webp);
     background-position: center;
     background-size: cover;
     height: 50vh;
