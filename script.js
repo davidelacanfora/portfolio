@@ -372,11 +372,6 @@ gsap.from(split.chars, {
   autoAlpha: 0,
   filter: "blur(10px)",   // fade in from opacity: 0 and visibility: hidden
   stagger: 0.05,  // 0.05 seconds between each
-  scrollTrigger: {
-      trigger: ".split",
-      start: "0% 100%",
-      toggleActions: "restart reverse restart reverse",
-    }
 });
 
 
