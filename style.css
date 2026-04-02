@@ -186,6 +186,9 @@ header {
 
 .split{
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(100);
+    filter: blur(10px);
 }
 
 .about{

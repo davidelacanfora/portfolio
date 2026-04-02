@@ -366,11 +366,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // now animate the characters in a staggered fashion
-gsap.from(split.chars, {
+gsap.to(split.chars, {
   duration: 1, 
-  y: 100,         // animate from 100px below
-  autoAlpha: 0,
-  filter: "blur(10px)",   // fade in from opacity: 0 and visibility: hidden
+  y: 0,         // animate from 100px below
+  autoAlpha: 1,
+  filter: "blur(0px)",   // fade in from opacity: 0 and visibility: hidden
   stagger: 0.05,  // 0.05 seconds between each
 });
 
