@@ -322,7 +322,7 @@ mask-position: center;
 
 .progettazioneImg {
     width: 50%;
-    background-image: url(ascoltoestrategia.jpg);
+    background-image: url(ascolto.webp);
     background-position: left;
     background-size: cover;
     height: 100vh;
@@ -339,7 +339,7 @@ z-index: 1;
 
 .realizzazioneImg{
     width: 50%;
-    background-image: url(design.jpg);
+    background-image: url(design.webp);
     background-position: center;
     background-size: cover;
     mask-size: contain;
@@ -353,7 +353,7 @@ mask-position: center;
 
 .assistenzaImg {
     width: 50%;
-    background-image: url(marketing.jpg);
+    background-image: url(marketing.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -366,7 +366,7 @@ mask-position: center;
 
 .marketingImg {
     width: 50%;
-    background-image: url(copy-seo.jpg);
+    background-image: url(copyseo.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
