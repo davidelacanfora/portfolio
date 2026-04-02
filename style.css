@@ -155,7 +155,7 @@ header {
 }
 
 .hero{
-    background-image: url(image-studio.jpg);
+    background-image: url(img-hero.webp);
     filter: grayscale(100%);
     position: relative;
     min-height: 100vh;
